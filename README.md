@@ -51,8 +51,8 @@ It handles:<br>
 ## Team Members:<br>
 Manasvi H<br>
 Madam Chetty Shreya Datta<br>
-Monica C V<br>
-Sushma Subramanyam K
+Monika C V<br>
+Sushma Subramanya K
 
 
 
