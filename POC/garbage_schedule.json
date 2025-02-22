@@ -1,0 +1,52 @@
+{
+    "cities": {
+        "Mumbai": {
+            "residential": {
+                "organic": ["Monday", "Thursday"],
+                "recyclable": ["Wednesday", "Saturday"],
+                "general_waste": ["Tuesday", "Friday"]
+            },
+            "commercial": {
+                "organic": ["Monday", "Wednesday", "Friday"],
+                "recyclable": ["Tuesday", "Thursday", "Saturday"],
+                "general_waste": ["Sunday"]
+            }
+        },
+        "Delhi": {
+            "residential": {
+                "organic": ["Tuesday", "Friday"],
+                "recyclable": ["Monday", "Thursday"],
+                "general_waste": ["Wednesday", "Saturday"]
+            },
+            "commercial": {
+                "organic": ["Monday", "Thursday"],
+                "recyclable": ["Wednesday", "Saturday"],
+                "general_waste": ["Tuesday", "Friday"]
+            }
+        },
+        "Bengaluru": {
+            "residential": {
+                "organic": ["Monday", "Thursday"],
+                "recyclable": ["Wednesday", "Saturday"],
+                "general_waste": ["Tuesday", "Friday"]
+            },
+            "commercial": {
+                "organic": ["Sunday", "Tuesday", "Friday"],
+                "recyclable": ["Monday", "Thursday", "Saturday"],
+                "general_waste": ["Wednesday"]
+            }
+        },
+        "Chennai": {
+            "residential": {
+                "organic": ["Tuesday", "Friday"],
+                "recyclable": ["Monday", "Wednesday"],
+                "general_waste": ["Thursday", "Saturday"]
+            },
+            "commercial": {
+                "organic": ["Monday", "Thursday", "Saturday"],
+                "recyclable": ["Tuesday", "Friday"],
+                "general_waste": ["Wednesday"]
+            }
+        }
+    }
+}
