@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issues - City Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Extended Navbar -->
+    <div class="navbar">
+        <h2 class="logo"><i class="fas fa-robot"></i> City Bot</h2>
+        <button class="report-btn" onclick="showModal('potholeModal')"><i class="fas fa-flag"></i> Report Pothole</button>
+        <button class="report-btn" onclick="showModal('garbageModal')"><i class="fas fa-trash"></i> Report Garbage</button>
+        <button class="report-btn" onclick="showModal('parkingModal')"><i class="fas fa-parking"></i> Report Parking</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to City Bot!</h1>
+        <p>Your assistant for reporting city issues and making roads better.</p>
+        <a href="https://botatservice.azurewebsites.net" class="btn">Chat with CityBot</a>
+    </div>
+
+    <!-- Reusable Modal Structure -->
+    <div id="potholeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('potholeModal')">&times;</span>
+            <h2>Report a Pothole</h2>
+            <form>
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter location" required>
+                <label for="details">Details:</label>
+                <textarea id="details" placeholder="Describe the issue" required></textarea>
+                <label for="imageUpload">Upload Image:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="garbageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('garbageModal')">&times;</span>
+            <h2>Report Garbage Issue</h2>
+            <form>
+                <label for="garbageLocation">Location:</label>
+                <input type="text" id="garbageLocation" placeholder="Enter location" required>
+                <label for="garbageDetails">Details:</label>
+                <textarea id="garbageDetails" placeholder="Describe the issue" required></textarea>
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="parkingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('parkingModal')">&times;</span>
+            <h2>Report Parking Issue</h2>
+            <form>
+                <label for="parkingLocation">Location:</label>
+                <input type="text" id="parkingLocation" placeholder="Enter location" required>
+                <label for="parkingDetails">Details:</label>
+                <textarea id="parkingDetails" placeholder="Describe the issue" required></textarea>
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
